@@ -13,11 +13,11 @@
   "engines": {
     "node": ">=4"
   },
-  "electronVersion": "0.34.1",
+  "electronVersion": "0.34.3",
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . App --out=dist --ignore='^/dist$' --prune --asar --platform=win32 --arch=ia32 --version=0.34.1 --overwrite",
+    "build": "electron-packager . App --out=dist --ignore='^/dist$' --prune --asar --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
     "release": "npm run build && grunt"
   },
   "files": [
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "electron-packager": "^5.0.0",
-    "electron-prebuilt": "^0.34.1",
+    "electron-prebuilt": "^0.34.3",
     "grunt": "^0.4.5",
     "grunt-electron-installer": "^1.0.10",
     "xo": "^0.10.0"
