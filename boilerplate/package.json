@@ -1,8 +1,8 @@
 {
   "name": "app",
   "productName": "App",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "desc",
   "license": "MIT",
   "repository": "user/repo",
   "author": {
@@ -17,7 +17,8 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion"
+    "build": "electron-packager . App --out=dist --ignore='^/dist$' --prune --asar --platform=win32 --arch=ia32 --version=0.34.1",
+    "release": "D:/npm/grunt.cmd"
   },
   "files": [
     "index.js",
@@ -33,6 +34,9 @@
   "devDependencies": {
     "electron-packager": "^5.0.0",
     "electron-prebuilt": "^0.34.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-electron-installer": "^1.0.10",
     "xo": "^0.10.0"
   },
   "xo": {
