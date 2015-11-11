@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				exe: '<%= pkg.productName %>.exe',
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
-				remoteReleases: ''
+				//remoteReleases: ''
 			}
 		},
 	});
