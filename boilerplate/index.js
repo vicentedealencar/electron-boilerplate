@@ -2,6 +2,8 @@
 const app = require('app');
 const BrowserWindow = require('browser-window');
 
+if(require('electron-squirrel-startup')) return;
+
 // report crashes to the Electron project
 require('crash-reporter').start();
 

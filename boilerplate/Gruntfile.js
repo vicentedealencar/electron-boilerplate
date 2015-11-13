@@ -6,13 +6,15 @@ module.exports = function(grunt) {
 
 		'create-windows-installer': {
 			ia32: {
-				appDirectory: './dist/App-win32-ia32',
-				outputDirectory: './dist/release',
-				authors: 'My App Inc.',
-				exe: '<%= pkg.productName %>.exe',
+				appDirectory: '../dist/<%= pkg.productName %>-win32-ia32',
+				outputDirectory: '../updates',
+				authors: '<%= pkg.author.name %>',
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
-				//remoteReleases: ''
+				remoteReleases: 'http://localhost:8081/updates?version=<%= pkg.version %>',
+				loadingGif: './assets/Arrioch-Halloween-Rorschach.ico',
+				iconUrl: 'http://www.iconarchive.com/download/i3025/arrioch/halloween/rorschach.ico',
+				setupIcon: './assets/Arrioch-Halloween-Rorschach.ico',
 			}
 		},
 	});

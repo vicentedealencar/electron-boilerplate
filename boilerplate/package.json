@@ -1,12 +1,12 @@
 {
-  "name": "app",
-  "productName": "App",
-  "version": "0.0.1",
-  "description": "desc",
+  "name": "appautoupdatable",
+  "productName": "appautoupdatable",
+  "version": "0.0.5",
+  "description": "appautoupdatable program",
   "license": "MIT",
   "repository": "user/repo",
   "author": {
-    "name": "",
+    "name": "My App Inc.",
     "email": "",
     "url": ""
   },
@@ -17,7 +17,7 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . App --out=dist --ignore='^/dist$' --prune --asar --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
+    "build": "electron-packager . appautoupdatable --out=../dist --prune --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
     "release": "npm run build && grunt"
   },
   "files": [
@@ -29,7 +29,8 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron-debug": "^0.3.0"
+    "electron-debug": "^0.3.0",
+    "electron-squirrel-startup": "^0.1.4"
   },
   "devDependencies": {
     "electron-packager": "^5.0.0",
