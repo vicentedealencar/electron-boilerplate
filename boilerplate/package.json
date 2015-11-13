@@ -1,7 +1,7 @@
 {
   "name": "appautoupdatable",
   "productName": "appautoupdatable",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "appautoupdatable program",
   "license": "MIT",
   "repository": "user/repo",
@@ -18,7 +18,8 @@
     "test": "xo",
     "start": "electron .",
     "build": "electron-packager . appautoupdatable --out=../dist --prune --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
-    "release": "npm run build && grunt"
+    "release": "npm run build && grunt",
+    "serve": "http-server .."
   },
   "files": [
     "index.js",
@@ -37,6 +38,7 @@
     "electron-prebuilt": "^0.34.3",
     "grunt": "^0.4.5",
     "grunt-electron-installer": "^1.0.10",
+    "http-server": "^0.8.5",
     "xo": "^0.10.0"
   },
   "xo": {
