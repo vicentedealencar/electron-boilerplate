@@ -1,8 +1,8 @@
 {
-  "name": "appautoupdatable",
-  "productName": "appautoupdatable",
-  "version": "0.0.6",
-  "description": "appautoupdatable program",
+  "name": "appdatable",
+  "productName": "appdatable",
+  "version": "0.1.2",
+  "description": "appdatable program",
   "license": "MIT",
   "repository": "user/repo",
   "author": {
@@ -17,7 +17,7 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . appautoupdatable --out=../dist --prune --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
+    "build": "electron-packager . appdatable --out=../dist --prune --platform=win32 --arch=ia32 --version=0.34.3 --overwrite",
     "release": "npm run build && grunt",
     "serve": "http-server .."
   },

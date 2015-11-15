@@ -1,8 +1,15 @@
 'use strict';
 const app = require('app');
 const BrowserWindow = require('browser-window');
+const autoUpdater = require('auto-updater');
 
 if(require('electron-squirrel-startup')) return;
+
+autoUpdater.setFeedUrl('http://appdatable.local:8081/updates');
+
+autoUpdater.checkForUpdates();
+
+autoUpdater.on('update-downloaded', () => autoUpdater.quitAndInstall());
 
 // report crashes to the Electron project
 require('crash-reporter').start();
