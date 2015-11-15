@@ -1,15 +1,25 @@
 'use strict';
 const app = require('app');
 const BrowserWindow = require('browser-window');
-const autoUpdater = require('auto-updater');
 
 if(require('electron-squirrel-startup')) return;
 
-autoUpdater.setFeedUrl('http://appdatable.local:8081/updates');
+const checkUpdateExe = () => {
+	const path = require('path');
+	const fs = require('fs');
+	const appFolder = path.dirname(process.execPath); // i.e. my-app/app-0.1.13/
+	const updateExe = path.resolve(appFolder, '..', 'Update.exe'); //i.e. my-app/Update.exe
 
-autoUpdater.checkForUpdates();
+	return path.basename(appFolder) != 'dist'; // dist\electron.exe
+};
 
-autoUpdater.on('update-downloaded', () => autoUpdater.quitAndInstall());
+if (checkUpdateExe()) {
+	const autoUpdater = require('auto-updater');
+
+	autoUpdater.setFeedUrl('http://appdatable.local:8081/updates');
+	autoUpdater.checkForUpdates();
+	autoUpdater.on('update-downloaded', () => autoUpdater.quitAndInstall());
+}
 
 // report crashes to the Electron project
 require('crash-reporter').start();
