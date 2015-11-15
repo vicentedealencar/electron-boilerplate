@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
 				remoteReleases: 'http://appdatable.local:8081/updates?version=<%= pkg.version %>',
-				loadingGif: './assets/Arrioch-Halloween-Rorschach.ico',
+				loadingGif: './assets/giphy.gif',
 				iconUrl: 'http://www.iconarchive.com/download/i3025/arrioch/halloween/rorschach.ico',
 				setupIcon: './assets/Arrioch-Halloween-Rorschach.ico',
 			}
