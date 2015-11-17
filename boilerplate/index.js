@@ -16,7 +16,7 @@ const checkUpdateExe = () => {
 if (checkUpdateExe()) {
 	const autoUpdater = require('auto-updater');
 
-	autoUpdater.setFeedUrl('http://appdatable.local:8081/updates');
+	autoUpdater.setFeedUrl('http://127.0.0.1:8081/updates');
 	autoUpdater.checkForUpdates();
 	autoUpdater.on('update-downloaded', () => autoUpdater.quitAndInstall());
 }
