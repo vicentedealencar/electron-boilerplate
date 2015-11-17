@@ -17,11 +17,6 @@ You can also `git clone` or [download](https://github.com/sindresorhus/electron-
 
 There's also a [Yeoman generator](https://github.com/sindresorhus/generator-electron).
 
-## Updatable
-
-```
-$ [cd boilerplate](https://github.com/vicentedealencar/electron-boilerplate/tree/master/boilerplate)
-```
 
 ## License
 
