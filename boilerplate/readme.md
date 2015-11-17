@@ -29,7 +29,7 @@ Builds the app for OS X, Linux, and Windows, using [electron-packager](https://g
 $ npm run serve
 ```
 
-Serve updates folder
+Setup [Squirrel for Windows](https://github.com/squirrel/squirrel.windows) update server using [http-server](https://github.com/indexzero/http-server)
 
 ### Release
 
