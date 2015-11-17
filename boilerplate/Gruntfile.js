@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 				authors: '<%= pkg.author.name %>',
 				description: '<%= pkg.description %>',
 				version: '<%= pkg.version %>',
-				remoteReleases: 'http://appdatable.local:8081/updates?version=<%= pkg.version %>',
+				remoteReleases: 'http://127.0.0.1:8081/updates?version=<%= pkg.version %>',
 				loadingGif: './assets/giphy.gif',
 				iconUrl: 'http://www.iconarchive.com/download/i3025/arrioch/halloween/rorschach.ico',
 				setupIcon: './assets/Arrioch-Halloween-Rorschach.ico',
